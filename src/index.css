@@ -13,6 +13,13 @@ body {
   font-family: 'Poppins', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('assets/images/bg.jpg'); 
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat; 
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .App {
@@ -23,8 +30,8 @@ body {
   height: 100vh; 
   width: 100%; 
   max-width: 500px;
-  background-color: white; 
-  border: 0px solid gray; 
+  background-color: rgba(255, 255, 255, 0.3); 
+  border: 1px solid gray; 
   margin: auto;
   border-radius: 8px; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
@@ -38,10 +45,10 @@ header {
   width: 100%;
   padding: 0.25em;
   background-color: white;
-  color: darkblue;
+  color: white;
   display: grid;
   place-content: center;
-  background: orange;
+  background: steelblue;
 }
 
 main {
@@ -60,12 +67,11 @@ footer {
   width: 100%;
   padding: 0.25em;
   background-color: white;
-  color: darkblue;
+  color: white;
   display: grid;
   place-content: center;
-  background: orange;
+  background: steelblue;
 }
-
 
 ul {
   width: 100%;
@@ -124,6 +130,10 @@ ul li::before {
 .item svg:hover {
   color: red;
   outline: none;
+}
+
+.noItem {
+  color: red;
 }
 
 .addForm {
