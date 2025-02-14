@@ -27,6 +27,7 @@ function App() {
 
   const [newItem, setNewItem] = useState('');
   const [searchItem, setSearchItem] = useState('');
+  const [count, setCount] = useState(0);
 
   const setAndStorage = (newList) => {
     setItems(newList);
@@ -65,13 +66,14 @@ function App() {
         <AddItem newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit}></AddItem>
         <Search searchItem={searchItem} setSearchItem={setSearchItem}></Search>
         <Content 
-          // items={items.filter((item) => ((item.item).toLowerCase()).includes(searchItem.toLowerCase()))} 
           items={items.filter(item => ((item.item).toLowerCase()).includes(searchItem.toLowerCase()))}
+          count={count}
+          setCount={setCount}
           handleCheck={handleCheck} 
           handleDelete={handleDelete}
         >
         </Content>
-        <Footer length={items.length}></Footer>
+        <Footer length={items.length} searchItem={searchItem} count={count} ></Footer>
     </div>
   )
 }

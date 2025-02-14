@@ -1,8 +1,10 @@
-const Footer = ({length}) => {
+const Footer = ({length, searchItem, count}) => {
     
     return(
        <footer>
-            <p> {length > 1 ? `${length} items` : length === 1 ? "1 item" : "No items!"}</p>
+            <p>{searchItem ? count ===1 ? '1 item found':`${count} items found` : 
+            length > 1 ? `${length} items in Grocery List` : length === 1 ? "1 item in Grocery List" : "No items in Grocery List!"}
+            </p>
        </footer> 
     )
 }
