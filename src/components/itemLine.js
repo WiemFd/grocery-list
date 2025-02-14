@@ -1,8 +1,9 @@
 import React from "react";
 import { FaTrashAlt } from 'react-icons/fa';
 
-const ItemLine = ({item, handleCheck, handleDelete}) => (
-            <li key={item.id} className="item">
+const ItemLine = ({item, handleCheck, handleDelete}) => {
+    return(
+        <li className="item">
                 <input
                 type="checkbox"
                 checked={item.checked} 
@@ -13,8 +14,9 @@ const ItemLine = ({item, handleCheck, handleDelete}) => (
                     onClick={() => handleDelete(item.id)}
                     role="button"
                     tabIndex="0"
-                />
-            </li> 
-);
-
-export default ItemLine ;
+            />
+        </li> 
+    )
+}
+            
+export default ItemLine

@@ -8,6 +8,6 @@ const Content = ({items, handleCheck, handleDelete}) => {
             <ItemsList items={items} handleCheck={handleCheck} handleDelete={handleDelete}></ItemsList>
         </main>
         )
-};
+}
 
-export default Content;
+export default Content

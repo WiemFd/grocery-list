@@ -9,4 +9,5 @@ const Header = (props) => {
 Header.defaultProps = {
   title: "Groceries List"
 }
- export default Header;
+
+export default Header
