@@ -1,11 +1,6 @@
 import { FaTrashAlt } from 'react-icons/fa';
-import { useEffect } from "react";
 
-const ItemLine = ({item, handleCheck, handleDelete, totalPrice, setTotalPrice}) => {
-
-    useEffect(() => {
-        setTotalPrice(totalPrice + Number(item.price));
-    }, [item, totalPrice, setTotalPrice]);
+const ItemLine = ({item, handleCheck, handleDelete}) => {
 
     return(
         <li className="item">

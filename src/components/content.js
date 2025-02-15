@@ -1,7 +1,7 @@
 
 import ItemsList from './itemsList';
 
-const Content = ({items, handleCheck, handleDelete, setCount, totalPrice, setTotalPrice}) => {
+const Content = ({items, handleCheck, handleDelete, setCount, setTotalPrice}) => {
 
     return (
         <main className="content">
@@ -9,7 +9,6 @@ const Content = ({items, handleCheck, handleDelete, setCount, totalPrice, setTot
             handleCheck={handleCheck} 
             handleDelete={handleDelete} 
             setCount={setCount}
-            totalPrice={totalPrice}
             setTotalPrice={setTotalPrice}
             ></ItemsList>
         </main>

@@ -80,13 +80,12 @@ function App() {
         <Content 
           items={items.filter(item => ((item.item).toLowerCase()).includes(searchItem.toLowerCase()))}
           setCount={setCount}
-          totalPrice={totalPrice}
           setTotalPrice={setTotalPrice}
           handleCheck={handleCheck} 
           handleDelete={handleDelete}
         >
         </Content>
-        <Footer length={items.length} searchItem={searchItem} count={count} totalPrice={totalPrice}></Footer>
+        <Footer length={items.length} searchItem={searchItem} count={count} totalPrice={totalPrice.toFixed(3)}></Footer>
     </div>
   )
 }
