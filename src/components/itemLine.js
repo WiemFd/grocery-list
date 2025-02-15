@@ -11,8 +11,10 @@ const ItemLine = ({item, handleCheck, handleDelete}) => {
                 />
                 <label onDoubleClick={() => {handleCheck(item.id)} }>{item.item}</label>
                 <input
+                id='Inputprice'
                 type="text"
-                value={item.price}
+                value={`${Number(item.price).toFixed(3)} DTN`}
+                readOnly
                 />
                 <FaTrashAlt
                     onClick={() => handleDelete(item.id)}

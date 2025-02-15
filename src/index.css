@@ -63,16 +63,6 @@ main {
   color: black;
 }
 
-footer {
-  width: 100%;
-  padding: 0.25em;
-  background-color: white;
-  color: white;
-  display: grid;
-  place-content: center;
-  background: steelblue;
-}
-
 ul {
   width: 100%;
   list-style: none;
@@ -200,5 +190,47 @@ button:hover {
   font-size: 0.75rem;
   padding: 0.25rem;
   border-radius: 0.25rem;
+  outline: none;
+}
+
+footer div {
+  width: 100%;
+  padding: 0.25em;
+  background-color: white;
+  color: white;
+  display: grid;
+  place-content: center;
+  background: orange;
+}
+
+footer p{
+  width: 100%;
+  padding: 0.25em;
+  background-color: white;
+  color: white;
+  display: grid;
+  place-content: center;
+  background: steelblue;
+}
+
+.addForm input[id='priceItem'] {
+  flex-grow: 1;
+  max-width: 140px ;
+  min-height: 48px;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+}
+
+.item input[id='Inputprice'] {
+  flex-grow: 1;
+  max-width: 120px ;
+  min-height: 48px;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  margin-right: 0.25rem;
+  text-align: center;
   outline: none;
 }
