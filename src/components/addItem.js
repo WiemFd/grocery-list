@@ -1,8 +1,9 @@
 import { useRef } from 'react';
 import { FaPlus } from 'react-icons/fa';
 
-const AddItem = ({newItem, setNewItem, price, setPrice, handleSubmit}) => {
+const AddItem = ({newItem, setNewItem, price, handleSubmit, handlePriceChange}) => {
     const inputRef=useRef();
+    
     return(
         <form className="addForm" onSubmit={handleSubmit}>
             <label htmlFor="addItem">
@@ -27,7 +28,7 @@ const AddItem = ({newItem, setNewItem, price, setPrice, handleSubmit}) => {
                 required
                 placeholder='Add price (DTN)'
                 value={price}
-                onChange={(e) => setPrice(e.target.value)}
+                onChange={handlePriceChange}
             />
             <button
                 type="submit"

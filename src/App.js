@@ -12,6 +12,7 @@ function App() {
   //       id: 1,
   //       checked: false,
   //       item: "Organic Whole Milk - 1 Gallon",
+  //       price: 2.5
   //   },
   //   {
   //       id: 2,
@@ -51,6 +52,13 @@ function App() {
     setPrice('');
   }
 
+  const handlePriceChange = (e) => {
+    const inputValue = e.target.value.replace(',', '.');
+    if (/^\d*\.?\d*$/.test(inputValue)) {
+        setPrice(inputValue);
+    }
+};
+
   const handleCheck = (id) => {
     const newList = items.map((item) =>
     id === item.id ? {...item, checked: !item.checked} : item);
@@ -68,11 +76,11 @@ function App() {
     <div className="App">
         <Header title="Grocery List"></Header>
         <AddItem 
-          newItem={newItem} 
-          setNewItem={setNewItem} 
+          newItem={newItem}  
+          setNewItem={setNewItem}
           handleSubmit={handleSubmit}
           price={price}
-          setPrice={setPrice}
+          handlePriceChange={handlePriceChange}
         >
 
         </AddItem>

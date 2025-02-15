@@ -226,7 +226,7 @@ footer p{
 
 .item input[id='Inputprice'] {
   flex-grow: 1;
-  max-width: 120px ;
+  max-width: 140px ;
   min-height: 48px;
   font-size: 0.75rem;
   padding: 0.25rem;
