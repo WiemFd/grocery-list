@@ -26,6 +26,8 @@ function App() {
   // ]);
 
   const [newItem, setNewItem] = useState('');
+  const [price, setPrice] = useState('');
+  const [totalPrice, setTotalPrice] = useState(0);
   const [searchItem, setSearchItem] = useState('');
   const [count, setCount] = useState(0);
 
@@ -34,9 +36,9 @@ function App() {
     localStorage.setItem('groceriesList', JSON.stringify(newList));
   }
 
-  const addItem = (item) => {
+  const addItem = (item, price) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
-    const newItem = {id, checked: false, item};
+    const newItem = {id, checked: false, item, price};
     const newList = [...items, newItem];
     setAndStorage(newList);
   }
@@ -44,8 +46,9 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if(!newItem) return;
-    addItem(newItem);
+    addItem(newItem,price);
     setNewItem('');
+    setPrice('');
   }
 
   const handleCheck = (id) => {
@@ -56,24 +59,34 @@ function App() {
 
   const handleDelete = (id) => {
     const newList = items.filter((item) =>
-    id !== item.id);
+    id !== item.id
+    );
     setAndStorage(newList);
   }
 
   return (
     <div className="App">
         <Header title="Grocery List"></Header>
-        <AddItem newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit}></AddItem>
+        <AddItem 
+          newItem={newItem} 
+          setNewItem={setNewItem} 
+          handleSubmit={handleSubmit}
+          price={price}
+          setPrice={setPrice}
+        >
+
+        </AddItem>
         <Search searchItem={searchItem} setSearchItem={setSearchItem}></Search>
         <Content 
           items={items.filter(item => ((item.item).toLowerCase()).includes(searchItem.toLowerCase()))}
-          count={count}
           setCount={setCount}
+          totalPrice={totalPrice}
+          setTotalPrice={setTotalPrice}
           handleCheck={handleCheck} 
           handleDelete={handleDelete}
         >
         </Content>
-        <Footer length={items.length} searchItem={searchItem} count={count} ></Footer>
+        <Footer length={items.length} searchItem={searchItem} count={count} totalPrice={totalPrice}></Footer>
     </div>
   )
 }

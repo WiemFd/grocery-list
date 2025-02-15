@@ -154,7 +154,7 @@ ul li::before {
   flex-grow: 1;
   max-width: calc(100% - 50px);
   min-height: 48px;
-  font-size: 1rem;
+  font-size: 0.75rem;
   padding: 0.25rem;
   border-radius: 0.25rem;
   margin-right: 0.25rem;
@@ -197,7 +197,7 @@ button:hover {
   flex-grow: 1;
   max-width: 100%;
   min-height: 48px;
-  font-size: 1rem;
+  font-size: 0.75rem;
   padding: 0.25rem;
   border-radius: 0.25rem;
   outline: none;
